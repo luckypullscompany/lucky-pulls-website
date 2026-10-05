@@ -3,9 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lucky Pulls & Company brings trading card and snack vending experiences to local businesses and customers.">
-  <title>Lucky Pulls & Company</title>
+  <meta name="description" content="Lucky Pulls & Company brings trading card, snack, and drink vending experiences to local businesses across Southwestern Ontario.">
+  <meta name="theme-color" content="#0d0f14">
+  <link rel="canonical" href="https://luckypullscompany.ca/">
+  <meta property="og:title" content="Lucky Pulls & Company">
+  <meta property="og:description" content="Trading cards, snacks, drinks, and local vending partnerships.">
+  <meta property="og:url" content="https://luckypullscompany.ca/">
+  <meta property="og:type" content="website">
+  <title>Lucky Pulls & Company | Trading Card & Snack Vending</title>
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Lucky Pulls & Company",
+    "url":"https://luckypullscompany.ca/",
+    "email":"luckypullscompany@gmail.com",
+    "description":"Local trading card, snack, and drink vending company serving Southwestern Ontario."
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -15,12 +31,13 @@
         <span>Lucky Pulls <em>& Company</em></span>
       </a>
       <button class="menu-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
-      <nav id="main-nav" class="main-nav">
+      <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
         <a href="#home">Home</a>
         <a href="#locations">Find a Machine</a>
         <a href="#host">Host a Machine</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -29,9 +46,9 @@
     <section id="home" class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Trading cards • snacks • local vending</p>
-          <h1>Your next lucky pull could be just around the corner.</h1>
-          <p class="lead">Lucky Pulls & Company brings convenient, eye-catching vending experiences to local businesses — from sealed trading card packs to everyday snacks and drinks.</p>
+          <p class="eyebrow">Local vending • trading cards • snacks</p>
+          <h1>Convenience with a little more excitement.</h1>
+          <p class="lead">Lucky Pulls & Company brings eye-catching vending experiences to local businesses, from sealed trading card packs to everyday snacks and drinks.</p>
           <div class="button-row">
             <a class="button primary" href="#locations">Find a Machine</a>
             <a class="button secondary" href="#host">Host a Machine</a>
@@ -39,10 +56,13 @@
           <div class="hero-notes">
             <span>Locally owned</span>
             <span>Professionally maintained</span>
-            <span>Built for convenience</span>
+            <span>Cashless-friendly</span>
           </div>
         </div>
-        <div class="hero-card" aria-label="Lucky Pulls vending illustration">
+
+        <div class="hero-card" aria-label="Illustration of Lucky Pulls vending machines">
+          <div class="glow glow-one"></div>
+          <div class="glow glow-two"></div>
           <div class="machine-card trading">
             <span class="machine-label">TRADING CARDS</span>
             <div class="product-grid cards" aria-hidden="true">
@@ -50,17 +70,18 @@
             </div>
           </div>
           <div class="machine-card snacks">
-            <span class="machine-label">SNACKS</span>
+            <span class="machine-label">SNACKS & DRINKS</span>
             <div class="product-grid snack-grid" aria-hidden="true">
               <i></i><i></i><i></i><i></i><i></i><i></i>
             </div>
           </div>
-          <div class="mascot-badge">LUCKY<br>PULLS</div>
+          <div class="mascot-badge"><span>LUCKY</span><strong>PULLS</strong></div>
+          <div class="canada-chip">CANADIAN OWNED</div>
         </div>
       </div>
     </section>
 
-    <section class="stats-strip">
+    <section class="stats-strip" aria-label="Lucky Pulls benefits">
       <div class="wrap stats-grid">
         <div><strong>Easy</strong><span>cashless purchasing</span></div>
         <div><strong>Fresh</strong><span>inventory rotations</span></div>
@@ -69,19 +90,45 @@
       </div>
     </section>
 
-    <section id="locations" class="section">
+    <section class="section intro-section">
+      <div class="wrap center-copy">
+        <p class="eyebrow">What we do</p>
+        <h2>Vending that gives customers another reason to stop in.</h2>
+        <p>We place, stock, maintain, and service machines in partner businesses. Customers get convenient access to products they want, while host locations gain a new point of interest without taking on inventory or extra work.</p>
+      </div>
+      <div class="wrap feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">01</span>
+          <h3>Trading cards</h3>
+          <p>Sealed packs and collectible products presented in a clean, convenient vending format.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">02</span>
+          <h3>Snacks & drinks</h3>
+          <p>Everyday favourites for workplaces, retail spaces, waiting areas, and other high-traffic locations.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">03</span>
+          <h3>Local partnerships</h3>
+          <p>We build long-term relationships with host businesses and take care of the day-to-day operation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="locations" class="section soft-section">
       <div class="wrap two-col">
         <div>
           <p class="eyebrow">Find a machine</p>
           <h2>Lucky Pulls near you.</h2>
-          <p>We’re building our first locations now. As machines go live, this page will become your quick guide to where you can grab trading card packs, snacks, and more.</p>
-          <p class="muted">No public locations listed yet — check back soon.</p>
+          <p>We’re building our first locations now. As machines go live, this section will become your quick guide to where you can grab trading card packs, snacks, drinks, and more.</p>
+          <p class="muted"><strong>Launching soon:</strong> our first Southwestern Ontario locations.</p>
         </div>
         <div class="location-card">
           <div class="pin">★</div>
-          <h3>First locations coming soon</h3>
-          <p>Follow Lucky Pulls & Company for launch announcements, restocks, featured sets, and new vending locations.</p>
-          <a class="text-link" href="#contact">Get launch updates →</a>
+          <p class="card-kicker">LOCATION UPDATES</p>
+          <h3>First machines coming soon</h3>
+          <p>We’ll add each public location here with address details, machine type, and what you can expect to find inside.</p>
+          <a class="text-link" href="mailto:luckypullscompany@gmail.com?subject=Lucky%20Pulls%20Launch%20Updates">Ask about launch updates →</a>
         </div>
       </div>
     </section>
@@ -91,11 +138,11 @@
         <div>
           <p class="eyebrow">For local businesses</p>
           <h2>Turn unused space into an extra reason to visit.</h2>
-          <p class="lead small">A Lucky Pulls machine can give customers another reason to walk through your doors — while requiring very little involvement from your staff.</p>
+          <p class="lead small">A Lucky Pulls machine can add customer interest and potential revenue while requiring very little involvement from your staff.</p>
           <div class="benefits">
             <article>
               <span>01</span>
-              <div><h3>More foot traffic</h3><p>Collectors may visit for cards and discover your products or services while they’re there.</p></div>
+              <div><h3>More foot traffic</h3><p>Collectors and convenience shoppers may visit for the machine and discover your products or services while they’re there.</p></div>
             </article>
             <article>
               <span>02</span>
@@ -107,15 +154,17 @@
             </article>
           </div>
         </div>
+
         <aside class="host-card">
           <p class="mini-label">HOST A MACHINE</p>
           <h3>Interested in partnering?</h3>
-          <p>We’re looking for high-visibility local businesses with accessible floor space and regular customer traffic.</p>
+          <p>We’re looking for visible, accessible locations with regular customer traffic and enough room for a professionally presented vending machine.</p>
           <ul>
             <li>No inventory investment required</li>
             <li>Professional machine upkeep</li>
             <li>Monthly host payment</li>
             <li>Cross-promotion opportunities</li>
+            <li>Simple, low-maintenance partnership</li>
           </ul>
           <a class="button primary full" href="mailto:luckypullscompany@gmail.com?subject=Host%20a%20Lucky%20Pulls%20Machine">Ask about hosting</a>
         </aside>
@@ -124,13 +173,40 @@
 
     <section id="about" class="section">
       <div class="wrap about-grid">
-        <div class="about-mark">LP<span>&Co.</span></div>
+        <div class="about-mark">LP<span>& Co.</span></div>
         <div>
           <p class="eyebrow">About us</p>
-          <h2>Built by collectors, for customers and local businesses.</h2>
-          <p>We’re Alex and Michelle, the owners of Lucky Pulls & Company. Our goal is to create convenient vending experiences that are fun for customers and genuinely useful for the businesses that host them.</p>
-          <p>We started with the idea of making sealed trading card packs easier to find, then expanded the vision to include snack and beverage vending as Lucky Pulls grows.</p>
-          <p>We believe the best vending locations are partnerships: customers get convenience, host businesses get added traffic and revenue potential, and we get to build something local that people enjoy.</p>
+          <h2>Built by Alex & Michelle.</h2>
+          <p>Lucky Pulls & Company is a locally owned vending business focused on creating convenient, fun experiences for customers and practical partnerships for host businesses.</p>
+          <p>We started with the idea of making sealed trading card packs easier to find and expanded the vision to include snack and beverage vending as the company grows.</p>
+          <p>Our goal is simple: keep machines clean, stocked, dependable, and worth coming back to.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <div class="wrap faq-layout">
+        <div>
+          <p class="eyebrow">Frequently asked questions</p>
+          <h2>Simple answers for customers and host locations.</h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>What products will Lucky Pulls machines carry?</summary>
+            <p>Depending on the machine and location, we plan to offer sealed trading card packs, snacks, drinks, and other convenient vending products.</p>
+          </details>
+          <details>
+            <summary>Does a host business need to buy inventory?</summary>
+            <p>No. Lucky Pulls & Company supplies, stocks, maintains, and services the machine.</p>
+          </details>
+          <details>
+            <summary>How does the 10% host payment work?</summary>
+            <p>Our current partnership model offers the host location 10% of the monthly profit generated by the machine placed at that business.</p>
+          </details>
+          <details>
+            <summary>Where are your machines located?</summary>
+            <p>Our first locations are currently being developed. Public locations will be listed on this website as they launch.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -139,12 +215,13 @@
       <div class="wrap contact-card">
         <div>
           <p class="eyebrow">Contact Lucky Pulls</p>
-          <h2>Want a machine at your location?</h2>
-          <p>Whether you’re a business interested in hosting or a customer looking for the next location, we’d love to hear from you.</p>
+          <h2>Let’s talk vending.</h2>
+          <p>Whether you’re a business interested in hosting a machine or a customer looking for a location, we’d love to hear from you.</p>
         </div>
         <div class="contact-actions">
-          <a class="button primary" href="mailto:luckypullscompany@gmail.com">luckypullscompany@gmail.com</a>
-          <p>Business phone and social links can be added here as soon as they’re ready.</p>
+          <a class="button primary" href="mailto:luckypullscompany@gmail.com">Email Lucky Pulls</a>
+          <a class="contact-email" href="mailto:luckypullscompany@gmail.com">luckypullscompany@gmail.com</a>
+          <p>Business phone, social links, and public machine locations can be added as they become available.</p>
         </div>
       </div>
     </section>
@@ -153,6 +230,10 @@
   <footer class="site-footer">
     <div class="wrap footer-wrap">
       <div><strong>Lucky Pulls & Company</strong><span>Trading cards • snacks • vending</span></div>
+      <div class="footer-links">
+        <a href="#host">Host a Machine</a>
+        <a href="#contact">Contact</a>
+      </div>
       <p>© <span id="year"></span> Lucky Pulls & Company. All rights reserved.</p>
     </div>
   </footer>
