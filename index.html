@@ -7,12 +7,13 @@
   <meta name="theme-color" content="#020b16">
   <link rel="canonical" href="https://luckypullscompany.ca/">
   <title>Lucky Pulls & Company | Trading Card & Snack Vending</title>
-  <link rel="stylesheet" href="reference.css">
+  <link rel="stylesheet" href="reference.css?v=6">
 </head>
 <body>
   <main>
     <section id="home" class="reference-stage" aria-label="Lucky Pulls & Company home">
-      <img id="reference-home-art" class="reference-image" src="assets/reference-home.webp" alt="Lucky Pulls & Company homepage showing branded trading card, snack and drink vending, local Canadian partnerships, and the Lucky Pulls Boston terrier mascot.">
+      <img id="reference-home-art" class="reference-image" width="512" height="384" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
+      <div class="art-loading" id="art-loading" aria-hidden="true">Loading Lucky Pulls…</div>
 
       <h1 class="sr-only">Trading cards, snacks, and a more exciting vending experience.</h1>
 
@@ -95,16 +96,24 @@
   <script>
     (async function () {
       const img = document.getElementById('reference-home-art');
+      const loading = document.getElementById('art-loading');
       if (!img) return;
       try {
-        const response = await fetch('assets/reference-home-1024-base64.txt?v=2', { cache: 'no-store' });
-        if (!response.ok) return;
+        const response = await fetch('assets/reference-home-q13-512.b64?v=6', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Artwork request failed');
         const base64 = (await response.text()).trim();
-        if (base64.startsWith('UklG')) {
-          img.src = 'data:image/webp;base64,' + base64;
-        }
+        if (!base64.startsWith('AAAAIGZ0eXBhdmlm')) throw new Error('Artwork data is incomplete');
+        img.onload = function () {
+          document.documentElement.classList.add('art-ready');
+          if (loading) loading.remove();
+        };
+        img.onerror = function () {
+          if (loading) loading.textContent = 'Lucky Pulls';
+        };
+        img.src = 'data:image/avif;base64,' + base64;
       } catch (error) {
-        console.warn('Reference artwork fallback in use.');
+        console.error(error);
+        if (loading) loading.textContent = 'Lucky Pulls';
       }
     }());
   </script>
