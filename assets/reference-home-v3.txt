@@ -1,0 +1,1 @@
+This file intentionally marks the full-size reference artwork refresh. The actual binary artwork is stored separately in the repository.
