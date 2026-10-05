@@ -1,3 +1,8 @@
+const mockupStyles = document.createElement('link');
+mockupStyles.rel = 'stylesheet';
+mockupStyles.href = 'mockup.css';
+document.head.appendChild(mockupStyles);
+
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.main-nav');
 
@@ -15,4 +20,5 @@ if (menuButton && nav) {
   });
 }
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
