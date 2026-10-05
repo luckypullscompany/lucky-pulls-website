@@ -13,6 +13,15 @@
   <title>Lucky Pulls & Company | Trading Card & Snack Vending</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="logo.css">
+  <style>
+    .hero-photo-card{padding:20px;background:linear-gradient(160deg,#111723,#0b0f16);border:1px solid #2d3546;border-radius:30px;box-shadow:0 30px 70px rgba(0,0,0,.36)}
+    .hero-photo-card .showcase-topline{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:14px}.hero-photo-card .showcase-topline span{font-size:.72rem;font-weight:950;letter-spacing:.16em;color:#ff6d7b}.hero-photo-card .showcase-topline strong{font-size:.82rem;color:#cfd6e5}
+    .vtm-hero-image{width:100%;display:block;border-radius:22px;box-shadow:0 18px 36px rgba(0,0,0,.25);background:#171d29}
+    .machine-spotlight{background:linear-gradient(180deg,#0e131c 0%,#121a27 100%);color:#fff;position:relative;overflow:hidden}.machine-spotlight:before{content:"";position:absolute;inset:-20% auto auto -10%;width:420px;height:420px;border-radius:50%;background:rgba(239,61,79,.13);filter:blur(30px)}.machine-spotlight:after{content:"";position:absolute;right:-140px;bottom:-160px;width:480px;height:480px;border-radius:50%;background:rgba(42,120,255,.14);filter:blur(30px)}
+    .machine-spotlight-grid{position:relative;z-index:1;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}.spotlight-image-card{background:#fff;border-radius:30px;padding:18px;box-shadow:0 28px 70px rgba(0,0,0,.28)}.spotlight-image-card img{width:100%;display:block;border-radius:20px}.machine-spotlight .eyebrow{color:#ff6d7b}.machine-spotlight h2{max-width:680px}.machine-spotlight p{color:#b9c2d2}.brand-pills{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px}.brand-pills span{padding:9px 12px;border-radius:999px;border:1px solid #334057;background:#171f2c;color:#dce4f2;font-size:.82rem;font-weight:850}.spotlight-note{border-left:3px solid #ef3d4f;padding-left:16px;color:#dfe5ef!important}
+    @media(max-width:960px){.machine-spotlight-grid{grid-template-columns:1fr;gap:36px}.spotlight-image-card{max-width:520px;margin:auto}.hero-photo-card{max-width:620px;margin:auto}}
+    @media(max-width:560px){.hero-photo-card{padding:14px;border-radius:22px}.spotlight-image-card{padding:12px;border-radius:22px}.machine-spotlight-grid{gap:28px}}
+  </style>
   <script type="application/ld+json">{
     "@context":"https://schema.org",
     "@type":"Organization",
@@ -60,32 +69,12 @@
           </div>
         </div>
 
-        <div class="hero-showcase" aria-label="Lucky Pulls branded vending machine concept">
-          <div class="showcase-topline">
-            <span>LUCKY PULLS MACHINE</span>
-            <strong>Branded vending concept</strong>
-          </div>
-          <div class="machine-shell">
-            <div class="machine-head">
-              <span class="machine-logo-image" role="img" aria-label="Lucky Pulls logo"></span>
-              <div><strong>Lucky Pulls</strong><span>Trading Cards &amp; More</span></div>
-            </div>
-            <div class="machine-body">
-              <div class="machine-window">
-                <div class="product-row"><i class="pack-red"></i><i class="pack-blue"></i><i class="pack-gold"></i></div>
-                <div class="product-row"><i class="pack-blue"></i><i class="pack-red"></i><i class="pack-gold"></i></div>
-                <div class="product-row"><i class="pack-gold"></i><i class="pack-blue"></i><i class="pack-red"></i></div>
-              </div>
-              <div class="machine-controls">
-                <div class="screen"><span>TAP TO START</span></div>
-                <div class="reader"></div>
-                <div class="slot"></div>
-              </div>
-            </div>
-          </div>
+        <div class="hero-showcase hero-photo-card" aria-label="Lucky Pulls VTM-style vending machine concept">
+          <div class="showcase-topline"><span>LUCKY PULLS VENDING</span><strong>VTM-style concept</strong></div>
+          <img class="vtm-hero-image" src="assets/lucky-pulls-vtm.webp" alt="Lucky Pulls &amp; Company branded trading card, snack and drink vending machine concept">
           <div class="showcase-stats">
             <div><strong>10%</strong><span>monthly host profit share</span></div>
-            <div><strong>Hands-off</strong><span>for your staff</span></div>
+            <div><strong>Full-service</strong><span>stocked and maintained by us</span></div>
           </div>
         </div>
       </div>
@@ -97,6 +86,22 @@
         <div><strong>Fresh</strong><span>inventory rotations</span></div>
         <div><strong>Local</strong><span>business partnerships</span></div>
         <div><strong>Hands-off</strong><span>for host locations</span></div>
+      </div>
+    </section>
+
+    <section class="section machine-spotlight" aria-label="Lucky Pulls machine showcase">
+      <div class="wrap machine-spotlight-grid">
+        <div class="spotlight-image-card">
+          <img src="assets/lucky-pulls-vtm.webp" alt="Lucky Pulls &amp; Company vending machine mockup with trading cards, snacks and drinks">
+        </div>
+        <div>
+          <p class="eyebrow">The Lucky Pulls experience</p>
+          <h2>A machine designed to be noticed.</h2>
+          <p>Our goal is to make the machine itself part of the experience — bold Lucky Pulls branding, a clean modern presentation, simple cashless purchasing, and a product mix that gives customers a reason to stop and browse.</p>
+          <div class="brand-pills"><span>Trading cards</span><span>Snacks</span><span>Drinks</span><span>Cashless payments</span><span>Local partnerships</span></div>
+          <p class="spotlight-note"><strong>For host locations:</strong> we handle stocking, cleaning, monitoring and service. You provide the space; we take care of the machine.</p>
+          <div class="button-row"><a class="button primary" href="#host">Host a Lucky Pulls Machine</a></div>
+        </div>
       </div>
     </section>
 
