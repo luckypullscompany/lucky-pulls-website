@@ -12,7 +12,7 @@
 <body>
   <main>
     <section id="home" class="reference-stage" aria-label="Lucky Pulls & Company home">
-      <img class="reference-image" src="assets/reference-home.webp" alt="Lucky Pulls & Company homepage showing branded trading card, snack and drink vending, local Canadian partnerships, and the Lucky Pulls Boston terrier mascot.">
+      <img id="reference-home-art" class="reference-image" src="assets/reference-home.webp" alt="Lucky Pulls & Company homepage showing branded trading card, snack and drink vending, local Canadian partnerships, and the Lucky Pulls Boston terrier mascot.">
 
       <h1 class="sr-only">Trading cards, snacks, and a more exciting vending experience.</h1>
 
@@ -24,10 +24,8 @@
         <a class="hotspot nav-about" href="#about" aria-label="About Us"></a>
         <a class="hotspot nav-contact" href="#contact" aria-label="Contact"></a>
         <a class="hotspot nav-find-cta" href="#find" aria-label="Find a Machine"></a>
-
         <a class="hotspot hero-host" href="#host" aria-label="Host a Machine"></a>
         <a class="hotspot hero-find" href="#find" aria-label="Find a Machine"></a>
-
         <a class="hotspot card-what" href="#what-we-do" aria-label="Learn more about what we do"></a>
         <a class="hotspot card-host" href="#host" aria-label="Host a Machine"></a>
         <a class="hotspot card-about" href="#about" aria-label="Read our story"></a>
@@ -93,5 +91,22 @@
     <span>© 2026 Lucky Pulls & Company</span>
     <span>Canadian owned • Southwestern Ontario</span>
   </footer>
+
+  <script>
+    (async function () {
+      const img = document.getElementById('reference-home-art');
+      if (!img) return;
+      try {
+        const response = await fetch('assets/reference-home-1024-base64.txt?v=2', { cache: 'no-store' });
+        if (!response.ok) return;
+        const base64 = (await response.text()).trim();
+        if (base64.startsWith('UklG')) {
+          img.src = 'data:image/webp;base64,' + base64;
+        }
+      } catch (error) {
+        console.warn('Reference artwork fallback in use.');
+      }
+    }());
+  </script>
 </body>
 </html>
